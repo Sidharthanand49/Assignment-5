@@ -1,0 +1,13 @@
+class Solution {
+    public int[][] construct2DArray(int[] original, int m, int n) {//m->row,n->columns
+         int n1=original.length;
+         if(n1 !=m*n) return new int[0][0];
+         int ans[][]=new int[m][n];
+         for(int i=0;i<n1;i++){
+             int nr=i/n;//i is indexes 
+             int nc=i%n;
+             ans[nr][nc]=original[i];
+         }
+         return ans;
+    }
+}
